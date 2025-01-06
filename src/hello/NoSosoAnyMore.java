@@ -2,10 +2,11 @@ package hello;
 
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
+import org.testng.annotations.AfterTest;
 import org.testng.annotations.BeforeTest;
 import org.testng.annotations.Test;
 
-public class soso {
+public class NoSosoAnyMore {
 	
 	
 	WebDriver driver = new ChromeDriver();
@@ -27,6 +28,14 @@ public class soso {
 		
 		
 	System.err.println(driver.getTitle());
+	}
+	
+	
+	@AfterTest
+	
+	public void myAfterTest() {
+		
+		driver.close();
 	}
 
 }
